@@ -15,7 +15,7 @@ export default function App() {
       <h1 className="text-5xl font-extrabold text-rose-600 mt-8 mb-2 tracking-tight">moda</h1>
       <h2 className="text-xl text-rose-400 mb-6 font-bold text-center">One Destination. All your favorite stores. Perfectly for you.</h2>
       <p className="text-lg text-gray-700 max-w-2xl text-center mb-6">
-        Moda brings everything together — every brand you love, every store you browse — into a single, beautifully streamlined experience.<br /><br />
+        Moda brings everything together, every brand you love, every store you browse into a single, beautifully streamlined experience.<br /><br />
         No more hopping between tabs, apps, or wishlists. Moda is your personalized gateway to the entire world of fashion.
       </p>
       <div className="text-rose-500 text-lg font-semibold mb-8">Coming Soon</div>
@@ -52,7 +52,9 @@ export default function App() {
           </div>
           <div>
             <h4 className="text-lg font-semibold text-rose-600 mb-1">Personalized to You</h4>
-            <p className="text-gray-700">Moda learns your style over time — and faster if you tell us what you love. From color analysis to fit preferences, we surface options you are more likely to love, not what algorithms think everyone wants.</p>
+            <p className="text-gray-700">Moda learns your style and recommends pieces you'll look great in. From color analysis to fit preferences, we surface options you are more likely to love. <br /><br />
+
+We’re here to help you discover your style, not define it. Moda celebrates individuality and ensures every recommendation reflects your unique taste, not a one-size-fits-all look.</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold text-rose-600 mb-1">Smarter Shopping</h4>
