@@ -10,6 +10,7 @@
   },
   "homepage": "https://mymoda.style",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "firebase": "^12.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

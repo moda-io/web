@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
+import { db } from './firebase';
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function App() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setEmail("");
+    try {
+      await addDoc(collection(db, "waitlist"), {
+        email,
+        createdAt: serverTimestamp(),
+      });
+      setSubmitted(true);
+      setEmail("");
+    } catch (error) {
+      alert("There was an error. Please try again.");
+      console.error(error);
+    }
   };
 
   return (
