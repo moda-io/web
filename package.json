@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "deploy": "npm run build && cp -r dist/* docs/"
   },
+  "homepage": "https://mymoda.style",
   "dependencies": {
     "firebase": "^12.0.0",
     "react": "^18.2.0",
