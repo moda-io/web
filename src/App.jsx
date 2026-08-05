@@ -22,7 +22,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-br from-pink-200 via-rose-100 to-blue-200 p-4">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-pink-200 via-rose-100 to-blue-200">
+      <main className="flex-1 flex flex-col items-center justify-start p-4">
       <h1 className="text-5xl font-extrabold text-rose-600 mt-8 mb-2 tracking-tight">moda</h1>
       <h2 className="text-xl text-rose-400 mb-6 font-bold text-center">One Destination. All your favorite stores. Perfectly for you.</h2>
       <p className="text-lg text-gray-700 max-w-2xl text-center mb-6">
@@ -73,6 +74,13 @@ We’re here to help you discover your style, not define it. Moda celebrates ind
           </div>
         </div>
       </section>
+      </main>
+      <footer className="w-full border-t border-rose-200/60 bg-white/40 backdrop-blur-sm py-6 px-4">
+        <div className="max-w-2xl mx-auto text-center text-sm text-gray-600">
+          <p className="font-medium text-gray-700">Moda Technologies Inc.</p>
+          <p className="mt-1">© {new Date().getFullYear()} All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 } 
