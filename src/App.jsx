@@ -204,12 +204,12 @@ export default function App() {
             {
               icon: "eye",
               title: "Personalized discovery",
-              body: "A personalized feed of fashion from hundreds of brands, tailored to your taste.",
+              body: "A personalized fashion feed from hundreds of brands, tailored to your taste.",
             },
             {
               icon: "drop",
               title: "Search exact colors",
-              body: "Pick any shade and find clothes that match it.",
+              body: "Pick any color or shade and find clothes that match it.",
             },
             {
               icon: "hanger",
