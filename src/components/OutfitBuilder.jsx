@@ -3,6 +3,33 @@ import { bottoms, shoes, tops } from "../data/catalog";
 import { APP_STORE_URL } from "../config";
 import { ArrowIcon, ProductThumb } from "./ui";
 
+function shuffle(items) {
+  const next = [...items];
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [next[i], next[j]] = [next[j], next[i]];
+  }
+  return next;
+}
+
+function mixByBrand(items) {
+  const buckets = new Map();
+  items.forEach((item) => {
+    const list = buckets.get(item.brand) ?? [];
+    list.push(item);
+    buckets.set(item.brand, list);
+  });
+
+  const queues = shuffle([...buckets.values()].map(shuffle));
+  const mixed = [];
+  while (queues.some((queue) => queue.length > 0)) {
+    queues.forEach((queue) => {
+      if (queue.length) mixed.push(queue.shift());
+    });
+  }
+  return mixed;
+}
+
 function Rail({ label, items, selectedId, onSelect }) {
   const scroller = useRef(null);
 
@@ -54,14 +81,19 @@ function Rail({ label, items, selectedId, onSelect }) {
 }
 
 export default function OutfitBuilder() {
-  const [top, setTop] = useState(tops[0]);
-  const [bottom, setBottom] = useState(bottoms[0]);
-  const [shoe, setShoe] = useState(shoes[0]);
+  const [{ mixedTops, mixedBottoms, mixedShoes }] = useState(() => ({
+    mixedTops: mixByBrand(tops),
+    mixedBottoms: mixByBrand(bottoms),
+    mixedShoes: mixByBrand(shoes),
+  }));
+  const [top, setTop] = useState(mixedTops[0]);
+  const [bottom, setBottom] = useState(mixedBottoms[0]);
+  const [shoe, setShoe] = useState(mixedShoes[0]);
   const look = [top, bottom, shoe];
   const total = look.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <section id="builder" className="bg-cream px-4 py-10 md:px-8 md:py-16">
+    <section id="how-it-works" className="bg-cream px-4 py-10 md:px-8 md:py-16">
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-charcoal text-white">
         <div className="grid gap-10 p-6 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] md:gap-8 md:p-12 lg:p-16">
           <div className="flex flex-col justify-center">
@@ -75,8 +107,8 @@ export default function OutfitBuilder() {
               From anywhere.
             </h2>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
-              One outfit. Every store. Swipe pieces from different retailers and
-              see them come together before you buy.
+              Swipe pieces from different retailers and see them come together
+              before you buy.
             </p>
             <ul className="mt-7 space-y-3 text-[15px] text-white/80">
               {[
@@ -104,16 +136,21 @@ export default function OutfitBuilder() {
           </div>
 
           <div className="relative">
-            <Rail label="TOPS" items={tops} selectedId={top.id} onSelect={setTop} />
+            <Rail
+              label="TOPS"
+              items={mixedTops}
+              selectedId={top.id}
+              onSelect={setTop}
+            />
             <Rail
               label="BOTTOMS"
-              items={bottoms}
+              items={mixedBottoms}
               selectedId={bottom.id}
               onSelect={setBottom}
             />
             <Rail
               label="SHOES"
-              items={shoes}
+              items={mixedShoes}
               selectedId={shoe.id}
               onSelect={setShoe}
             />
@@ -163,11 +200,6 @@ export default function OutfitBuilder() {
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <p className="font-script pointer-events-none absolute -left-6 top-8 rotate-[-8deg] text-2xl text-white">
-                  One outfit.
-                  <br />
-                  Every store.
-                </p>
               </div>
             </div>
           </div>

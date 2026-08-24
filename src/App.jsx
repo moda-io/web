@@ -176,7 +176,7 @@ export default function App() {
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 md:grid-cols-2 md:px-8 md:pb-24 md:pt-16">
         <div>
           <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-muted">
-            PUBLIC BETA · AVAILABLE ON IPHONE
+            BETA · AVAILABLE ON IPHONE
           </p>
           <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.92] tracking-tight md:text-6xl lg:text-7xl">
             Find clothes
@@ -203,18 +203,18 @@ export default function App() {
           {[
             {
               icon: "eye",
-              title: "Discover visually",
-              body: "A personalized feed of fashion from hundreds of stores, tailored to your taste.",
+              title: "Personalized discovery",
+              body: "A personalized feed of fashion from hundreds of brands, tailored to your taste.",
             },
             {
               icon: "drop",
               title: "Search exact colors",
-              body: "Pick any shade and find clothes that match it — not just similar.",
+              body: "Pick any shade and find clothes that match it.",
             },
             {
               icon: "hanger",
               title: "Build outfits",
-              body: "Mix pieces from different stores and see them come together.",
+              body: "Mix pieces from different stores and see what works before committing to a purchase.",
             },
             {
               icon: "save",
@@ -236,39 +236,6 @@ export default function App() {
         </div>
       </section>
 
-      <section id="how-it-works" className="bg-cream px-4 py-20 md:px-8 md:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-muted">
-            THE BIG PROBLEM
-          </p>
-          <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-6xl">
-            You don't shop
-            <br />
-            one piece at a time.
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            You find a jacket. Then pants somewhere else. Then the shoes. But
-            online shopping makes you do it all separately.
-          </p>
-        </div>
-        <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
-          {[
-            { label: "Jacket.", store: "Store 01", color: "#6B3F2A" },
-            { label: "Pants.", store: "Store 02", color: "#E6D9C8" },
-            { label: "Shoes.", store: "Store 03", color: "#3B2A22" },
-          ].map((item) => (
-            <div key={item.label} className="rounded-2xl bg-white p-4 text-center shadow-sm">
-              <div
-                className="mx-auto mb-4 h-28 w-full rounded-xl"
-                style={{ background: item.color }}
-              />
-              <p className="text-[11px] tracking-[0.16em] text-muted">{item.store}</p>
-              <p className="mt-2 font-display text-xl font-bold">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <OutfitBuilder />
 
       <div id="features">
@@ -283,12 +250,12 @@ export default function App() {
           <h2 className="max-w-3xl font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-5xl">
             Don't know what to search?
             <br />
-            Start looking.
+            We'll show you.
           </h2>
           <p className="mt-5 max-w-lg text-[17px] leading-relaxed text-muted">
-            Discover visually instead of trying to describe what's in your head.
-            A feed that learns what you actually wear — not what's trending in a
-            generic algorithm.
+            Get a personalized feed instead of blindly looking things up or
+            going through every store website's page. We pull hundreds of brands
+            into one feed, designed specifically for you.
           </p>
           <div className="mt-10 columns-2 gap-3 md:columns-3">
             {feedLooks.map((look) => (
@@ -369,17 +336,17 @@ export default function App() {
       <section id="about" className="bg-charcoal px-4 py-24 text-white md:px-8 md:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-6xl">
-            Fashion shopping has been fragmented.
+            Shopping shouldn't be a chore.
             <br />
-            Moda brings it together.
+            Moda makes it fun and easy.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/60">
-            Discover. Search. Build. Save. Shop.
+            Effortless Style
           </p>
           <div className="mt-10 flex flex-col items-center gap-3">
             <AppStoreBadge dark />
             <p className="text-[11px] font-semibold tracking-[0.16em] text-white/50">
-              DOWNLOAD MODA · PUBLIC BETA ON IPHONE
+              DOWNLOAD MODA · BETA ON IPHONE
             </p>
           </div>
         </div>

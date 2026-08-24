@@ -33,8 +33,8 @@ export default function ColorSearch() {
             Forget what they called it.
           </h2>
           <p className="mt-5 max-w-md text-[17px] leading-relaxed text-muted">
-            Pick the exact shade. Moda finds the clothes — not “close enough,”
-            not a keyword guess. The color you want, from stores everywhere.
+            Pick the exact shade. Moda finds the clothes — not a keyword guess.
+            The color you want, from stores everywhere.
           </p>
 
           <div className="mt-8 max-w-md">
