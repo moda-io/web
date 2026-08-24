@@ -1,0 +1,188 @@
+const img = (id) => `/images/${id}.jpg`;
+
+export const tops = [
+  {
+    id: "t1",
+    name: "Wool Overshirt",
+    brand: "A&F",
+    price: 195,
+    hue: 22,
+    color: "#6B3F2A",
+    img: img("photo-1591047139829-d91aecb6caea"),
+  },
+  {
+    id: "t2",
+    name: "Leather Jacket",
+    brand: "COS",
+    price: 285,
+    hue: 18,
+    color: "#2A211C",
+    img: img("photo-1551028719-00167b16eac5"),
+  },
+  {
+    id: "t3",
+    name: "Knit Cardigan",
+    brand: "Arket",
+    price: 120,
+    hue: 32,
+    color: "#C4A484",
+    img: img("photo-1434389677669-e08b4cac3105"),
+  },
+  {
+    id: "t4",
+    name: "Denim Jacket",
+    brand: "Levi's",
+    price: 148,
+    hue: 210,
+    color: "#3D4F6B",
+    img: img("photo-1611312449408-fcece27cdbb7"),
+  },
+  {
+    id: "t5",
+    name: "Linen Shirt",
+    brand: "Everlane",
+    price: 88,
+    hue: 40,
+    color: "#E8DCC8",
+    img: img("photo-1596755094514-f87e34085b2c"),
+  },
+];
+
+export const bottoms = [
+  {
+    id: "b1",
+    name: "Wide Trousers",
+    brand: "COS",
+    price: 135,
+    hue: 42,
+    color: "#E6D9C8",
+    img: img("photo-1594633312681-425c7b97ccd1"),
+  },
+  {
+    id: "b2",
+    name: "Straight Jeans",
+    brand: "A&F",
+    price: 98,
+    hue: 215,
+    color: "#4A5A73",
+    img: img("photo-1541099649105-f69ad21f3246"),
+  },
+  {
+    id: "b3",
+    name: "Tailored Pants",
+    brand: "Arket",
+    price: 110,
+    hue: 25,
+    color: "#5C4033",
+    img: img("photo-1624378439575-d8705ad7ae80"),
+  },
+  {
+    id: "b4",
+    name: "Pleated Trousers",
+    brand: "Massimo Dutti",
+    price: 145,
+    hue: 0,
+    color: "#1A1A1A",
+    img: img("photo-1473966968600-fa801b869a1a"),
+  },
+];
+
+export const shoes = [
+  {
+    id: "s1",
+    name: "Leather Boots",
+    brand: "Vagabond",
+    price: 160,
+    hue: 20,
+    color: "#3B2A22",
+    img: img("photo-1608256246200-53e635b5b65f"),
+  },
+  {
+    id: "s2",
+    name: "Court Sneakers",
+    brand: "Veja",
+    price: 140,
+    hue: 40,
+    color: "#F2EDE6",
+    img: img("photo-1549298916-b41d501d3772"),
+  },
+  {
+    id: "s3",
+    name: "Suede Loafers",
+    brand: "COS",
+    price: 175,
+    hue: 28,
+    color: "#8B5E3C",
+    img: img("photo-1614252235316-8c857d38b5f4"),
+  },
+  {
+    id: "s4",
+    name: "Chelsea Boot",
+    brand: "Blundstone",
+    price: 210,
+    hue: 15,
+    color: "#1C1410",
+    img: img("photo-1520639888713-7851133b1ed0"),
+  },
+];
+
+export const colorPieces = [
+  ...tops,
+  ...bottoms,
+  {
+    id: "c1",
+    name: "Silk Scarf",
+    brand: "Sézane",
+    price: 85,
+    hue: 12,
+    color: "#8B2E1F",
+    img: img("photo-1584917865442-de89df76afd3"),
+  },
+  {
+    id: "c2",
+    name: "Olive Overcoat",
+    brand: "Arket",
+    price: 245,
+    hue: 75,
+    color: "#5B6148",
+    img: img("photo-1539533018447-63fcce2678e3"),
+  },
+  {
+    id: "c3",
+    name: "Navy Knit",
+    brand: "COS",
+    price: 95,
+    hue: 225,
+    color: "#1E2A44",
+    img: img("photo-1620799140408-edc6dcb6d633"),
+  },
+  {
+    id: "c4",
+    name: "Rust Sweater",
+    brand: "Everlane",
+    price: 78,
+    hue: 18,
+    color: "#B55233",
+    img: img("photo-1576566588028-4147f3842f27"),
+  },
+];
+
+export const feedLooks = [
+  { id: "f1", img: img("photo-1617137968427-85924c800a22"), label: "For You" },
+  { id: "f2", img: img("photo-1539109136881-3be0616acf4b"), label: "Tailoring" },
+  { id: "f3", img: img("photo-1490481651871-ab68de25d43d"), label: "New in" },
+  { id: "f4", img: img("photo-1487222477894-8943e31ef7b2"), label: "Outerwear" },
+  { id: "f5", img: img("photo-1515886657613-9f3515b0c78f"), label: "Following" },
+  { id: "f6", img: img("photo-1552374196-1ab2a1c593e8"), label: "Saved" },
+];
+
+export const autumnPalette = [
+  "#3B2A22",
+  "#6B3F2A",
+  "#8B5E3C",
+  "#B55233",
+  "#C4A484",
+  "#5B6148",
+  "#E6D9C8",
+  "#1A1A1A",
+];
