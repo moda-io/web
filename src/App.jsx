@@ -58,8 +58,13 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-black/5 bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <a href="/" className="font-logo text-[28px] font-light tracking-[0.1em]">
-          moda
+        <a href="/" className="flex items-end gap-1">
+          <span className="font-logo text-[28px] font-light leading-none tracking-[0.1em]">
+            moda
+          </span>
+          <span className="mb-0.5 rounded-[3px] border border-black/15 bg-black/[0.04] px-1 py-px text-[8px] font-semibold tracking-[0.12em] text-ink/70">
+            BETA
+          </span>
         </a>
         <nav className="hidden items-center gap-8 text-[12px] font-semibold tracking-[0.16em] md:flex">
           {nav.map((item) => (
@@ -176,7 +181,7 @@ export default function App() {
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 md:grid-cols-2 md:px-8 md:pb-24 md:pt-16">
         <div>
           <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-muted">
-            BETA · AVAILABLE ON IPHONE
+            AVAILABLE ON IPHONE
           </p>
           <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.92] tracking-tight md:text-6xl lg:text-7xl">
             Find clothes
@@ -346,7 +351,7 @@ export default function App() {
           <div className="mt-10 flex flex-col items-center gap-3">
             <AppStoreBadge dark />
             <p className="text-[11px] font-semibold tracking-[0.16em] text-white/50">
-              DOWNLOAD MODA · BETA ON IPHONE
+              Available on iPhone
             </p>
           </div>
         </div>
