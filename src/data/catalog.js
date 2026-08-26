@@ -462,13 +462,44 @@ export const feedLooks = [
   { id: "f12", img: img("photo-1523381210434-271e8be1f52b"), label: "Pieces" },
 ];
 
-export const autumnPalette = [
-  "#3B2A22",
-  "#6B3F2A",
-  "#8B5E3C",
-  "#B55233",
-  "#C4A484",
-  "#5B6148",
-  "#E6D9C8",
-  "#1A1A1A",
+export const colorPalettes = [
+  {
+    name: "DEEP AUTUMN",
+    colors: [
+      "#3B2A22",
+      "#6B3F2A",
+      "#8B5E3C",
+      "#B55233",
+      "#C4A484",
+      "#5B6148",
+      "#E6D9C8",
+      "#1A1A1A",
+    ],
+  },
+  {
+    name: "COOL WINTER",
+    colors: [
+      "#0A0A0A",
+      "#F4F4F6",
+      "#1B4B8A",
+      "#0E6B4F",
+      "#C41E3A",
+      "#5B2C6F",
+      "#1A6B7A",
+      "#D4D0DC",
+    ],
+  },
+  {
+    name: "LIGHT SPRING",
+    colors: [
+      "#F4D4C4",
+      "#E8A87C",
+      "#F2C14E",
+      "#A8C5A0",
+      "#7EB8C9",
+      "#E8C4B8",
+      "#C4A882",
+      "#F7EFE4",
+    ],
+  },
 ];

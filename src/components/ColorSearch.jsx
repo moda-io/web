@@ -21,7 +21,7 @@ export default function ColorSearch() {
   const matches = ranked.filter((item) => item.dist < 40).slice(0, 8);
 
   return (
-    <section id="color" className="bg-cream px-4 py-20 md:px-8 md:py-28">
+    <section id="color" className="scroll-mt-24 bg-cream px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
           <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-muted">
@@ -30,7 +30,7 @@ export default function ColorSearch() {
           <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-5xl">
             You know the color.
             <br />
-            Forget what they called it.
+            Forget what they call it.
           </h2>
           <p className="mt-5 max-w-md text-[17px] leading-relaxed text-muted">
             Pick the exact shade. Moda finds the clothes — not a keyword guess.
