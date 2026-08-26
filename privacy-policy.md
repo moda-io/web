@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** [8-21-2026]
+**Last updated:** August 25, 2026
 
 Moda Technologies Inc. ("Moda," "we," "us," or "our") operates the Moda mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, and the choices you have.
 
@@ -48,7 +48,7 @@ We do not sell your personal information. We may share information with:
 
 ## 4. Data Retention
 
-We retain account information for as long as your account is active. Selfie images used for color analysis are not retained after processing, as described above. You may request deletion of your account and associated data at any time (see Section 6).
+We retain account information for as long as your account is active. Selfie images used for color analysis are not retained after processing, as described above. If you request deletion of your account, we delete your account and associated personal data (see Section 6).
 
 ## 5. Data Security
 
@@ -58,7 +58,8 @@ We take reasonable technical and organizational measures to protect your informa
 
 You may:
 
-- Access, correct, or request deletion of your account information by contacting us at support@mymoda.style
+- Access or correct your account information by contacting us at support@mymoda.style
+- Request deletion of your account and associated personal data at any time in the App or by emailing support@mymoda.style. We will delete your account and associated personal data when you ask us to. Deleting the App from your device does not delete your account; you need to request deletion in the App or by contacting us.
 - Decline to grant camera access, though this will disable features that require it (such as color analysis)
 - Delete the App at any time to stop all data collection going forward
 
