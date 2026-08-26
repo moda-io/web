@@ -93,7 +93,7 @@ export default function OutfitBuilder() {
   const total = look.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <section id="how-it-works" className="bg-cream px-4 py-10 md:px-8 md:py-16">
+    <section id="outfit-builder" className="scroll-mt-24 bg-cream px-4 py-10 md:px-8 md:py-16">
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-charcoal text-white">
         <div className="grid gap-10 p-6 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] md:gap-8 md:p-12 lg:p-16">
           <div className="flex flex-col justify-center">
@@ -103,8 +103,6 @@ export default function OutfitBuilder() {
             </p>
             <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-5xl lg:text-6xl">
               Build your look.
-              <br />
-              From anywhere.
             </h2>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
               Swipe pieces from different retailers and see them come together

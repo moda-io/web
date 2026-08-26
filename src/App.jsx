@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { autumnPalette, feedLooks } from "./data/catalog";
+import { colorPalettes, feedLooks } from "./data/catalog";
 import { APP_STORE_URL } from "./config";
 import { AppStoreBadge, ArrowIcon } from "./components/ui";
 import OutfitBuilder from "./components/OutfitBuilder";
 import ColorSearch from "./components/ColorSearch";
 
 const nav = [
-  { href: "#how-it-works", label: "HOW IT WORKS" },
-  { href: "#features", label: "FEATURES" },
-  { href: "#about", label: "ABOUT" },
+  { href: "#outfit-builder", label: "Build Outfits" },
+  { href: "#color", label: "Precise Colors" },
+  { href: "#discover", label: "Personalization" },
 ];
 
 function FeatureIcon({ name }) {
@@ -66,7 +66,7 @@ function Header() {
             BETA
           </span>
         </a>
-        <nav className="hidden items-center gap-8 text-[12px] font-semibold tracking-[0.16em] md:flex">
+        <nav className="hidden items-center gap-10 text-[12px] font-semibold tracking-[0.12em] md:flex">
           {nav.map((item) => (
             <a key={item.href} href={item.href} className="text-ink/70 hover:text-ink">
               {item.label}
@@ -175,9 +175,9 @@ export default function App() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-4 md:px-8 md:py-14">
           {[
             {
-              icon: "eye",
-              title: "Personalized discovery",
-              body: "A personalized fashion feed from hundreds of brands, tailored to your taste.",
+              icon: "hanger",
+              title: "Build outfits",
+              body: "Mix pieces from different stores and see what works before committing to a purchase.",
             },
             {
               icon: "drop",
@@ -185,9 +185,9 @@ export default function App() {
               body: "Pick any color or shade and find clothes that match it.",
             },
             {
-              icon: "hanger",
-              title: "Build outfits",
-              body: "Mix pieces from different stores and see what works before committing to a purchase.",
+              icon: "eye",
+              title: "Personalized discovery",
+              body: "A personalized fashion feed from hundreds of brands, tailored to your taste.",
             },
             {
               icon: "save",
@@ -211,11 +211,9 @@ export default function App() {
 
       <OutfitBuilder />
 
-      <div id="features">
-        <ColorSearch />
-      </div>
+      <ColorSearch />
 
-      <section id="discover" className="bg-cream px-4 py-20 md:px-8 md:py-28">
+      <section id="discover" className="scroll-mt-24 bg-cream px-4 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-6xl">
           <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-muted">
             03 — DISCOVERY
@@ -253,19 +251,23 @@ export default function App() {
               Color analysis that becomes part of how you discover and shop —
               not a quiz you take once and forget.
             </p>
-            <div className="mt-8">
-              <p className="mb-3 text-[11px] font-semibold tracking-[0.16em] text-muted">
-                DEEP AUTUMN
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {autumnPalette.map((c) => (
-                  <span
-                    key={c}
-                    className="h-12 w-12 rounded-full"
-                    style={{ background: c }}
-                  />
-                ))}
-              </div>
+            <div className="mt-8 space-y-5">
+              {colorPalettes.map((palette) => (
+                <div key={palette.name}>
+                  <p className="mb-2 text-[11px] font-semibold tracking-[0.16em] text-muted">
+                    {palette.name}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {palette.colors.map((c) => (
+                      <span
+                        key={`${palette.name}-${c}`}
+                        className="h-8 w-8 rounded-full ring-1 ring-black/10"
+                        style={{ background: c }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </article>
 
@@ -338,13 +340,9 @@ export default function App() {
             </a>
           </nav>
           <p className="text-sm">
-            Moda Technologies Inc. © {new Date().getFullYear()}
+            Copyright © 2026 Moda Technologies Inc. All rights reserved.
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-7xl text-[11px] leading-relaxed text-white/40">
-          Apple, the Apple logo, and App Store are trademarks of Apple Inc.,
-          registered in the U.S. and other countries.
-        </p>
       </footer>
     </div>
   );
