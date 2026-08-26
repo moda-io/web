@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { autumnPalette, feedLooks } from "./data/catalog";
 import { APP_STORE_URL } from "./config";
-import { AppStoreBadge, ArrowIcon, Phone } from "./components/ui";
+import { AppStoreBadge, ArrowIcon } from "./components/ui";
 import OutfitBuilder from "./components/OutfitBuilder";
 import ColorSearch from "./components/ColorSearch";
 
@@ -116,59 +116,25 @@ function Header() {
 
 function HeroPhones() {
   return (
-    <div className="relative mx-auto h-[460px] w-full max-w-[520px] md:h-[540px]">
-      <div className="absolute left-0 top-16 z-10 hidden origin-bottom -rotate-[14deg] sm:block">
-        <Phone width={180}>
-          <div className="flex h-full flex-col bg-cream p-3">
-            <p className="text-[10px] font-semibold tracking-[0.14em] text-muted">SEARCH COLOR</p>
-            <div className="mt-3 h-28 rounded-2xl bg-[#6B3F2A]" />
-            <p className="mt-2 text-[11px] text-muted">#6B3F2A · warm brown</p>
-            <div className="mt-3 grid grid-cols-2 gap-1.5">
-              {["#8B5E3C", "#3B2A22", "#C4A484", "#B55233"].map((c) => (
-                <div key={c} className="aspect-square rounded-lg" style={{ background: c }} />
-              ))}
-            </div>
-          </div>
-        </Phone>
-      </div>
-      <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2">
-        <Phone width={220}>
-          <div className="flex h-full flex-col bg-white">
-            <div className="flex justify-around px-2 pt-4 text-[10px] font-semibold tracking-wide">
-              <span className="border-b-2 border-black pb-1">For You</span>
-              <span className="text-muted">Following</span>
-              <span className="text-muted">Saved</span>
-            </div>
-            <img
-              src="/images/photo-1617137968427-85924c800a22.jpg"
-              alt="Fashion feed"
-              className="mt-2 h-full object-cover"
-            />
-          </div>
-        </Phone>
-      </div>
-      <div className="absolute right-0 top-20 z-10 hidden origin-bottom rotate-[12deg] sm:block">
-        <Phone width={180}>
-          <div className="flex h-full flex-col bg-cream p-3">
-            <p className="text-[10px] font-semibold tracking-[0.14em] text-muted">BUILD OUTFIT</p>
-            <div className="mt-3 grid grid-cols-2 gap-1.5">
-              <div className="aspect-[3/4] rounded-lg bg-[#6B3F2A]" />
-              <div className="aspect-[3/4] rounded-lg bg-[#E6D9C8]" />
-              <div className="col-span-2 h-16 rounded-lg bg-[#3B2A22]" />
-            </div>
-            <div className="mt-3 space-y-1 text-[10px] text-muted">
-              <p>A&F · $195</p>
-              <p>COS · $135</p>
-              <p>Vagabond · $160</p>
-            </div>
-          </div>
-        </Phone>
-      </div>
-      <div className="stamp absolute -right-2 bottom-8 z-30 hidden md:grid">
-        ALL STORES
-        <br />
-        ALL TOGETHER
-      </div>
+    <div className="relative mx-auto flex w-full max-w-[580px] items-end justify-center">
+      <img
+        src="/images/hero/search.png?v=18"
+        alt="Search clothes in Moda"
+        className="relative z-10 mb-8 hidden w-[42%] drop-shadow-md sm:block"
+        draggable="false"
+      />
+      <img
+        src="/images/hero/home.png?v=18"
+        alt="Moda home feed"
+        className="relative z-20 w-[72%] drop-shadow-md sm:-mx-[8%] sm:w-[50%]"
+        draggable="false"
+      />
+      <img
+        src="/images/hero/outfits.png?v=20"
+        alt="Build outfits in Moda"
+        className="relative z-10 mb-8 hidden w-[40%] drop-shadow-md sm:block"
+        draggable="false"
+      />
     </div>
   );
 }
@@ -191,7 +157,9 @@ export default function App() {
             love.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-            Discover visually. Search precisely. Build outfits from anywhere.
+            Personalized Discovery. Precise Colors. Built Outfits.
+            <br />
+            Effortless Style
           </p>
           <div className="mt-8 flex flex-col items-start gap-3">
             <AppStoreBadge />
@@ -313,12 +281,10 @@ export default function App() {
               ready. Outfits, pieces, and collections — in one place.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-2">
-              {["Outfits", "Pieces", "Collections"].map((tab, i) => (
+              {["Outfits", "Pieces", "Collections"].map((tab) => (
                 <div
                   key={tab}
-                  className={`rounded-xl p-3 text-center text-xs font-semibold tracking-wide ${
-                    i === 0 ? "bg-ink text-white" : "bg-cream"
-                  }`}
+                  className="rounded-xl bg-ink p-3 text-center text-xs font-semibold tracking-wide text-white"
                 >
                   {tab}
                 </div>
@@ -375,6 +341,10 @@ export default function App() {
             Moda Technologies Inc. © {new Date().getFullYear()}
           </p>
         </div>
+        <p className="mx-auto mt-6 max-w-7xl text-[11px] leading-relaxed text-white/40">
+          Apple, the Apple logo, and App Store are trademarks of Apple Inc.,
+          registered in the U.S. and other countries.
+        </p>
       </footer>
     </div>
   );
