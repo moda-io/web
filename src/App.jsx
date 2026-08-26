@@ -225,7 +225,7 @@ export default function App() {
           </h2>
           <p className="mt-5 max-w-lg text-[17px] leading-relaxed text-muted">
             Get a personalized feed instead of blindly looking things up or
-            going through every store website's page. We pull hundreds of brands
+            going through every store website page. We pull hundreds of brands
             into one feed, designed specifically for you.
           </p>
           <div className="mt-10 columns-2 gap-3 md:columns-3">
