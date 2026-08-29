@@ -1,15 +1,15 @@
 # Privacy Policy
 
-**Last updated:** August 25, 2026
+**Last updated:** August 28, 2026
 
-Moda Technologies Inc. ("Moda," "we," "us," or "our") operates the Moda mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, and the choices you have.
+Moda Technologies Inc. ("Moda," "we," "us," or "our") operates the Moda mobile application for iOS and Android (the "App"). This Privacy Policy explains what information we collect, how we use it, and the choices you have.
 
 By using the App, you agree to the collection and use of information as described in this policy. If you do not agree, please do not use the App.
 
 ## 1. Information We Collect
 
 ### Account Information
-When you sign up, we collect information provided through Apple Sign In (or any other sign-in method we support), such as your name and email address (or Apple's private relay email), and a unique account identifier.
+When you sign up, we collect information provided through the sign-in method you use, such as Sign in with Apple or Google Sign-In (or any other sign-in method we support). This may include your name, email address (including Apple's private relay email if you use Sign in with Apple), and a unique account identifier.
 
 ### Photos You Take In-App
 Certain features ask you to take a photo directly within the App:
