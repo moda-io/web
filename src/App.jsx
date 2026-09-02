@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { colorPalettes, feedLooks } from "./data/catalog";
 import { APP_STORE_URL } from "./config";
-import { AppStoreBadge, ArrowIcon } from "./components/ui";
+import { AppStoreBadge, GooglePlayBadge, ArrowIcon } from "./components/ui";
 import OutfitBuilder from "./components/OutfitBuilder";
 import ColorSearch from "./components/ColorSearch";
 
@@ -146,9 +146,6 @@ export default function App() {
 
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 md:grid-cols-2 md:px-8 md:pb-24 md:pt-16">
         <div>
-          <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-muted">
-            AVAILABLE ON IPHONE
-          </p>
           <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.92] tracking-tight md:text-6xl lg:text-7xl">
             Find clothes
             <br />
@@ -157,15 +154,11 @@ export default function App() {
             love.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-            Personalized Discovery. Precise Colors. Built Outfits.
-            <br />
-            Effortless Style
+            Build Outfits. Search Precise Colors. Personalize Discovery.
           </p>
-          <div className="mt-8 flex flex-col items-start gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
             <AppStoreBadge />
-            <p className="text-[11px] font-semibold tracking-[0.16em] text-muted">
-              AVAILABLE ON IPHONE
-            </p>
+            <GooglePlayBadge />
           </div>
         </div>
         <HeroPhones />
@@ -316,11 +309,9 @@ export default function App() {
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/60">
             Effortless Style
           </p>
-          <div className="mt-10 flex flex-col items-center gap-3">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <AppStoreBadge dark />
-            <p className="text-[11px] font-semibold tracking-[0.16em] text-white/50">
-              Available on iPhone
-            </p>
+            <GooglePlayBadge />
           </div>
         </div>
       </section>

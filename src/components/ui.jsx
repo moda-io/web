@@ -1,5 +1,8 @@
 import React from "react";
-import { APP_STORE_URL } from "../config";
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../config";
+
+const appStoreBadgeClass = "h-12 w-auto";
+const googlePlayBadgeClass = "h-[45px] w-auto";
 
 export function AppStoreBadge({ dark = false }) {
   return (
@@ -17,9 +20,29 @@ export function AppStoreBadge({ dark = false }) {
             : "/badges/download-on-the-app-store-black.svg"
         }
         alt="Download on the App Store"
-        className="h-12 w-auto"
+        className={appStoreBadgeClass}
         height={48}
         width={144}
+      />
+    </a>
+  );
+}
+
+export function GooglePlayBadge() {
+  return (
+    <a
+      href={GOOGLE_PLAY_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block"
+      aria-label="Get it on Google Play"
+    >
+      <img
+        src="/badges/get-it-on-google-play.png"
+        alt="Get it on Google Play"
+        className={googlePlayBadgeClass}
+        height={45}
+        width={151}
       />
     </a>
   );
