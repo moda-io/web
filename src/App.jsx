@@ -9,6 +9,7 @@ const nav = [
   { href: "#outfit-builder", label: "Build Outfits" },
   { href: "#color", label: "Precise Colors" },
   { href: "#discover", label: "Personalization" },
+  { href: "/team.html", label: "Team" },
 ];
 
 function FeatureIcon({ name }) {

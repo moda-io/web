@@ -97,6 +97,50 @@ main { padding: 48px 24px 40px; }
   color: var(--muted);
 }
 
+.team-card {
+  background: var(--bone);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.team-card .label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.team-card h2 {
+  font-family: "Inter Tight", Inter, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  border: none;
+  padding: 0;
+}
+
+.team-card p {
+  margin: 0 0 18px;
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+.team-card a.team-link {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--ink);
+}
+
+.team-card a.team-link:hover {
+  opacity: 0.7;
+}
+
 main h2 {
   font-family: "Inter Tight", Inter, sans-serif;
   font-size: 22px;
